@@ -5,7 +5,7 @@ import {
     ManyToOne,
     CreateDateColumn,
   } from 'typeorm';
-  import { Task } from './task.entity';
+  import { Product } from './product.entity';
   import { User } from './user.entity';
   
   @Entity()
@@ -13,8 +13,8 @@ import {
     @PrimaryGeneratedColumn()
     id!: number;
   
-    @ManyToOne(() => Task, (task) => task.submissions)
-    task!: Task;
+    @ManyToOne(() => Product, (product) => product.submissions)
+    task!: Product;
   
     @ManyToOne(() => User, (user) => user.submissions)
     student!: User;

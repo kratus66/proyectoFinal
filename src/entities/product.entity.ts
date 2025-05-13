@@ -10,7 +10,7 @@ import { Class } from './class.entity';
 import { Submission } from './submission.entity';
 
 @Entity()
-export class Task {
+export class Product {
   @PrimaryGeneratedColumn()
   id!: number;
 

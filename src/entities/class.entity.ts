@@ -9,7 +9,7 @@ import {
   CreateDateColumn,
 } from 'typeorm';
 import { User } from './user.entity';
-import { Task } from './task.entity';
+import { Product} from './product.entity';
 
 @Entity()
 export class Class {
@@ -29,8 +29,8 @@ export class Class {
   @JoinTable()
   students!: User[];
 
-  @OneToMany(() => Task, (task) => task.classRef)
-  tasks!: Task[];
+  @OneToMany(() => Product, (product) => product.classRef)
+  tasks!: Product[];
 
   @CreateDateColumn()
   createdAt!: Date;
